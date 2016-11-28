@@ -112,6 +112,7 @@ i.fa {
   color: #5C6075;
   padding-left: 17px;
   font-size: 21px;
+    padding-top: 21px;
 }
 
 /*RIGHT BLOCK*/
@@ -146,4 +147,70 @@ i.material-icons {
     color: #ccc;
     opacity: 0.4;
     font-family: "Roboto Condensed", sans-serif;
+}
+.main-portfolio__img {
+    width: 291px;
+    height: 294px;
+}
+.main-portfolio__content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 196px;
+}
+.main-portfolio__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #777;
+    width: 21%;
+    height: 265px;
+}
+.main-portfolio__title {
+    margin-top: 68px;
+    font-size: 44px;
+    color: #fff;
+    font-family: "Roboto Slab", sans-serif;
+}
+.port__link {
+    color: #fff;
+    margin-top: 50px;
+    border: 1px solid #f55273;
+    padding: 10px 36px 10px 36px;
+    background: #f55273;
+    border-radius: 9px;
+    display: none;
+}
+.main-portfolio__item:hover {
+    transition: all .5s linear;
+    background: #33376E;
+    border: 1px solid #33376E;
+}
+.main-portfolio__item:hover .port__link {
+    display: block;
+    transition: all .5s linear;
+}
+i.fa.fa-mobile {
+    font-size: 222px;
+}
+.main-skills__content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 177px;
+}
+i.fa.fa-television {
+    font-size: 222px;
+}
+.main-skills_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills__title {
+    color: #fff;
+    font-size: 44px;
+    margin-bottom: -12px;
+}
+.skills__desc {
+    color: #5c6075;
+    font-size: 19px;
 }
