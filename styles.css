@@ -124,7 +124,7 @@ i.fa {
 .home-content_left {
     display: flex;
     flex-direction: column;
-    margin-top: 83px;
+    margin-top: 100px;
     margin-left: 120px;
 }
 .main-home__content {
@@ -178,16 +178,6 @@ i.material-icons {
     padding: 10px 36px 10px 36px;
     background: #f55273;
     border-radius: 9px;
-    display: none;
-}
-.main-portfolio__item:hover {
-    transition: all .5s linear;
-    background: #33376E;
-    border: 1px solid #33376E;
-}
-.main-portfolio__item:hover .port__link {
-    display: block;
-    transition: all .5s linear;
 }
 i.fa.fa-mobile {
     font-size: 222px;
