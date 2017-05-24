@@ -1,55 +1,30 @@
-<!DOCTYPE html>
-<html ng-app="myApp" ng-strict-di>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<title>BRM</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-		crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-		  rel="stylesheet">
-	<meta charset="utf-8">
-	<base href="/">
-</head>
+  <meta charset="utf-8">
+  <title>LeaderBoard</title>
+  <base href="/">
+
+  <meta http-equiv="cleartype" content="on">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="styles.8e2de575952344784d4f.bundle.css" rel="stylesheet"/></head>
 
 <body>
-	<div class="main-wrap">
-		<div id="gmenu" class="left-content">
-			<h1 class="left-content__title">BigRedMashine</h1>
-			<ul class="left-content__list">
-				<a href="/" class="lc_link">
-					<i class="fa fa-home" aria-hidden="true"></i>
-					<li class="left-content__item">Home</li>
-				</a>
-				<a href="/portfolio" class="lc_link">
-					<i class="fa fa-pencil" aria-hidden="true"></i>
-					<li class="left-content__item">PortfolioNew</li>
-				</a>
-				<a href="/skills" class="lc_link">
-					<i class="fa fa-black-tie" aria-hidden="true"></i>
-					<li class="left-content__item">Skills</li>
-				</a>
-			</ul>
-			<a href="https://vk.com/best_can9" target="_blank" class="social-wrap__link btn-vk">
-				<i class="fa fa-vk" aria-hidden="true"></i> Vkontakte
-			</a>
-		</div>
-		<div class="right-content">
-			<main ng-view></main>
-		</div>
-	</div>
+  <script>
+    $("#selectBackground ul li a").click(function (e) {
+      e.preventDefault();
+      $("#selectBackground ul li a").removeClass('active');
+      $(this).addClass('active');
+    })
 
-	<script>
-		$("#gmenu > ul > a").click(function(){
-  			$(".active").removeClass("active");
-  			$(this).addClass("active");
-});
-
-	</script>
-
-	<script src="libs/angular.min.js"></script>
-	<script src="scripts/app.min.js"></script>
-</body>
+  </script>
+  <app-root>Loading...</app-root>
+<script type="text/javascript" src="inline.c668dbc66a909591b4c2.bundle.js"></script><script type="text/javascript" src="polyfills.456a9bac641ef5f0139a.bundle.js"></script><script type="text/javascript" src="scripts.944a0b4853eec38a8a60.bundle.js"></script><script type="text/javascript" src="vendor.60d148f40e77b927b0ab.bundle.js"></script><script type="text/javascript" src="main.4034de7f2c6c5bfa9cbd.bundle.js"></script></body>
 
 </html>
