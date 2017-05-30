@@ -1468,6 +1468,10 @@ span.select2-selection.select2-selection--single span {
   height: 65px;
 }
 
+#headerMenu {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .specoffers__title {
     white-space: normal;
@@ -1778,7 +1782,10 @@ span.select2-selection.select2-selection--single span {
 
   .collapse.show {
     z-index: 999999999;
-    width: 192px;
+    width: 343px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 
   .bg-inverse {
@@ -1794,6 +1801,21 @@ span.select2-selection.select2-selection--single span {
             justify-content: center;
     height: 100px;
     padding-bottom: 0;
+  }
+
+  #headerMenu {
+    display: block;
+  }
+
+  #headerMenu .header-menu__link {
+    padding-left: 44px;
+    border-right: 1px solid #efefef;
+    width: 220px;
+    display: inline-block;
+  }
+
+  #headerMenu .header-menu__link:nth-last-child(1) {
+    border-right: none;
   }
 
   .header-menu {
@@ -1816,18 +1838,6 @@ span.select2-selection.select2-selection--single span {
     content: none;
   }
 
-  .header-menu__link:after {
-    content: "";
-    width: 2px;
-    height: 32px;
-    background: #efefef;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    left: 75px;
-    top: -4px;
-  }
-
   .header-menu__logo {
     display: none;
   }
@@ -1840,6 +1850,7 @@ span.select2-selection.select2-selection--single span {
     padding-top: 30px;
     padding-bottom: 9px;
     border-bottom: 2px solid #efefef;
+    display: none;
   }
 
   .header__container {
