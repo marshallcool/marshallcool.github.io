@@ -2311,6 +2311,7 @@ span.select2-selection.select2-selection--single span {
 @media screen and (max-width: 600px) {
   #headerMenu .header-menu__link {
     padding-left: 20px;
+    font-size: 0.5625rem;
   }
 }
 
