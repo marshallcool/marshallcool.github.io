@@ -2293,6 +2293,27 @@ span.select2-selection.select2-selection--single span {
   }
 }
 
+@media screen and (max-width: 697px) {
+  .header-menu__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #headerMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #headerMenu .header-menu__link {
+    padding-left: 20px;
+  }
+}
+
 html {
   overflow-x: hidden;
 }
