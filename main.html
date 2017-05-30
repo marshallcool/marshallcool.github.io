@@ -9,8 +9,9 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
@@ -19,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link rel="stylesheet" href="./dist/styles.css">
     <script type="text/javascript" src="./dist/bundle.js"></script>
+
 </head>
 <script>
     $(function () {
@@ -49,6 +51,80 @@
             $('#nav-icon').click(function () {
                 $(this).toggleClass('open');
             });
+            var Magnetic = {
+                elements: [],
+                getY: function (event) {
+                    var yPos = event.pageY - window.innerHeight / 2;
+                    return yPos;
+                },
+                getX: function (event) {
+                    var xPos = event.pageX - window.innerWidth / 2;
+                    return xPos;
+                },
+                positionElements: function (event) {
+                    var elements = Magnetic.elements[0];
+                    for (var i = 0; i < elements.length; i++) {
+                        var element = document.getElementById(Magnetic.elements[0][i].id);
+                        var adjusetedX = (elements[i].speed / 15 * Magnetic.getX(event));
+                        var adjusetedY = (elements[i].speed / 15 * Magnetic.getY(event));
+                        element.style.transform = "translate3d(" + adjusetedX + "px,0,0)";
+                    }
+                },
+                bindEvents: function () {
+                    document.body.onmousemove = Magnetic.positionElements;
+                },
+                init: function () {
+                    this.elements.push(arguments);
+                    this.bindEvents();
+                }
+            };
+
+            Magnetic.init({
+                id: 'Layer_1',
+                speed: 0.15
+            }, {
+                id: 'Layer_2',
+                speed: 0.25
+            }, {
+                id: 'Layer_3',
+                speed: 0.5
+            }, {
+                id: 'Layer_4',
+                speed: 1.25
+            }, {
+                id: 'Layer_5',
+                speed: 0.75
+            }, {
+                id: 'Layer_6',
+                speed: 0.65
+            }, {
+                id: 'Layer_7',
+                speed: 0.45
+            }, {
+                id: 'Layer_8',
+                speed: 0.75
+            }, {
+                id: 'Layer_9',
+                speed: 0.25
+            }, {
+                id: 'Layer_10',
+                speed: 0.25
+            }, {
+                id: 'Layer_11',
+                speed: 0.25
+            }, {
+                id: 'Layer_12',
+                speed: 0.25
+            }, {
+                id: 'Layer_13',
+                speed: 0.25
+            }, {
+                id: 'Layer_14',
+                speed: 0.25
+            }, {
+                id: 'Layer_15',
+                speed: 1.25
+            }, );
         });
     })
 </script>
@@ -256,203 +332,63 @@
             </div>
         </div>
     </div>
-    <section class="s-myorders">
+    <div class="delivery-parallax">
+        <div class="delivery__parallax-block">
+            <h1>Доставка товаров из америки</h1>
+            <div class="parallax-block-content">
+                <p class="parallax-block-content__title">Самостоятельная покупка</p>
+                <p class="parallax-block-content__desc">получите америнкаский адрес и самостоятельно заказывайте товары</p>
+            </div>
+            <div class="parallax-block-content">
+                <p class="parallax-block-content__title">Самостоятельная покупка</p>
+                <p class="parallax-block-content__desc">получите америнкаский адрес и самостоятельно заказывайте товары</p>
+            </div>
+        </div>
+        <img id="Layer_1" src="images/main/parallax/bg.svg" alt="">
+        <img src="images/main/parallax/star.svg" alt="" id="Layer_7">
+        <img src="images/main/parallax/3 облака.svg" alt="" id="Layer_8">
+        <img src="images/main/parallax/4 город.svg" alt="" id="Layer_9">
+        <img src="images/main/parallax/5 город.svg" alt="" id="Layer_10">
+        <img src="images/main/parallax/6 город.svg" alt="" id="Layer_11">
+        <img src="images/main/parallax/7 город.svg" alt="" id="Layer_12">
+        <img src="images/main/parallax/8 город.svg" alt="" id="Layer_13">
+        <img src="images/main/parallax/9 город.svg" alt="" id="Layer_14">
+        <img src="images/main/parallax/11 грузовик.svg" alt="" id="Layer_3">
+        <img src="images/main/parallax/12 машина.svg" alt="" id="Layer_4">
+        <img src="images/main/parallax/10 самолет.svg" alt="" id="Layer_15">
+        <img src="images/main/parallax/free.svg" alt="" id="Layer_2">
+        <img src="images/main/parallax/14 волна.svg" alt="" id="Layer_5">
+        <img src="images/main/parallax/15volna.svg" alt="" id="Layer_6">
+    </div>
+    <div class="receiving-delivery">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 hidden-sm-down">
-                    <h2 class="myorders-title">мои заказы</h2>
+                <div class="col-md-4 text-center">
+                    <img src="images/main/delivery/boxs.svg" alt="">
+                    <p class="dark-orange receiving-delivery__title">покупка</p>
+                    <p class="receiving-delivery__desc">Вы оформляете заказ на ваш личный адресс США который доступен после регистрации</p>
                 </div>
-                <div class="col-6">
-                    <div class="dropdown show hidden-md-up">
-                        <a class="myorders-menu__title myorders-menu__title--active dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">самостоятельные<i class="fa fa-question-circle-o myorders-menu__icon" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="только для международной"></i><br> покупки</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <ul class="myorders-menu__list">
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link myorders-menu__link--active">ожидают поступления</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">на складе</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">упакованы</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">ожидают оплаты</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">отправлены <span class="num-orders">100</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/main/delivery/items.svg" alt="">
+                    <p class="dark-orange receiving-delivery__title">покупка</p>
+                    <p class="receiving-delivery__desc">Вы оформляете заказ на ваш личный адресс США который доступен после регистрации</p>
                 </div>
-                <div class="col-6">
-                    <div class="dropdown show hidden-md-up">
-                        <a class="myorders-menu__title dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">заказы полного<i class="fa fa-question-circle-o myorders-menu__icon" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="только для международной"></i><br> сопровождения</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <ul class="myorders-menu__list">
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link myorders-menu__link--active">ожидают поступления</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">на складе</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">упакованы</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">ожидают оплаты</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">отправлены <span class="num-orders">100</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/main/delivery/aircraft.svg" alt="">
+                    <p class="dark-orange receiving-delivery__title">покупка</p>
+                    <p class="receiving-delivery__desc">Вы оформляете заказ на ваш личный адресс США который доступен после регистрации</p>
                 </div>
-                <div class="col-sm-12 hidden-sm-down">
-                    <div class="myorders-menu">
-                        <div class="myorders-menu__top">
-                            <a href="#" class="myorders-menu__title myorders-menu__title--active">самостоятельные покупки <i class="fa fa-question-circle-o myorders-menu__icon" aria-hidden="true"></i></a>
-                            <a href="#" class="myorders-menu__title">заказы полного сопровождения <i class="fa fa-question-circle-o myorders-menu__icon" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="только для международной отправки"></i></a>
-                        </div>
-                        <div class="myorders-menu__bot">
-                            <ul class="myorders-menu__list">
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link myorders-menu__link--active">ожидают поступления</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">на складе</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">упакованы</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">ожидают оплаты</a>
-                                </li>
-                                <li class="myorders-menu__item">
-                                    <a href="#" class="myorders-menu__link">отправлены <span class="num-orders">100</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-12 receiving-delivery__help">
+                    <p>Мы знаем что вы живете в разных часовых поясах по всему миру вот почему мы предлагаем поддержку 24 часа
+                        7 дней в неделю </p>
+                    <p>Вы можете задавать вопросы на русском языке ищите зеленюк</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-12">
-                    <div class="form-wrapper">
-                        <div class="form-group">
-                            <label for="" class="material-input">
-                                <span>Трекинг<span class="dark-orange">*</span></span>
-                                <input id="" class="input-control" type="text" />
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="material-input">
-                                <span>Название магазина</span>
-                                <input class="input-control" id="" type="text" />
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="material-input material-input__error">
-                                <span>Цена $</span>
-                                <input class="input-control" id="" type="text" />
-                            </label>
-                            <label for="" class="data-error">Ошибка</label>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="material-input">
-                                <span>Комментарий</span>
-                                <textarea class="input-control" name="" id="" rows="2"></textarea>
-                            </label>
-                        </div>
-                        <div class="form-group hidden-md-down">
-                            <button class="btn form-wrapper__btn">Добавить поссылку</button>
-                        </div>
-                        <div class="form-group hidden-md-up text-center">
-                            <button class="btn form-wrapper__btn">Добавить поссылку</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 hidden-sm-down">
-                    <div class="myorders-adress">
-                        <h2 class="myorders-adress__title text-center dark-blue">получите личный адрес в США</h2>
-                        <p class="myorders-adress__desc text-center">Введите свое <span class="dark-blue">настоящее имя</span> на английском:</p>
-                        <div class="myorders-adress__form">
-                            <input type="text" class="myorders-adress__input">
-                            <input type="text" class="myorders-adress__input">
-                            <a href="#" class="btn myorders-adress__btn">получить</a>
-                        </div>
-                        <p class="myorders-adress__feature text-center dark-blue">Мы предоставляем вам 2 личных адреса в США. Используйте их для оформления покупок в интернет-магазинах
-                            Америки.
-                        </p>
-                    </div>
-                    <!--<div class="myorders-adress-active">
-                        <div class="myorders-adress-active-title">
-                            <a href="#" class="myorders-adress-active__link active">пенсильвания</a>
-                            <a href="#" class="myorders-adress-active__link">делавер</a>
-                        </div>
-                        <div class="myorders-adress-active-info">
-                            <p class="myorders-adress-active-info__title light-blue">Виртуальный адресс в США: <i class="fa fa-question-circle-o myorders-menu__icon" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="только для международной отправки"></i></p>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">Address:</p>
-                                <p>283 В883</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">Suite:</p>
-                                <p>1100-330743</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">City:</p>
-                                <p>ALPHARETTA</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">State:</p>
-                                <p>A(Georgia)</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">Zip Code:</p>
-                                <p>3005-3982</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">Country:</p>
-                                <p>USA</p>
-                            </div>
-                            <div class="myorders-adress-active-desc">
-                                <p class="light-blue">Phone:</p>
-                                <p>(770) 713-7835</p>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-                <div class="col">
-                    <table class="myorders-table">
-                        <tr class="myorders-table__tr">
-                            <th class="text-center myorders-table__th">объект</th>
-                            <th class="text-center myorders-table__th">Трекинг</th>
-                            <th class="text-center myorders-table__th">магазин</th>
-                            <th class="text-center myorders-table__th">цена</th>
-                            <th class="text-center myorders-table__th">создано</th>
-                        </tr>
-                        <tr class="myorders-table__tr">
-                            <td class="text-center myorders-table__td"><a href="#" class="myorders-table__link">MF467808</a></td>
-                            <td class="text-center myorders-table__td"><a href="#" class="myorders-table__link">4526тото</a></td>
-                            <td class="text-center myorders-table__td">ТЕST</td>
-                            <td class="text-center myorders-table__td">$0.00</td>
-                            <td class="text-center myorders-table__td">10.04.2017, 10:13</td>
-                        </tr>
-                        <tr class="myorders-table__tr">
-                            <td class="text-center myorders-table__td"><a href="#" class="myorders-table__link">MF467808</a></td>
-                            <td class="text-center myorders-table__td"><a href="#" class="myorders-table__link">4526тото</a></td>
-                            <td class="text-center myorders-table__td">ТЕST</td>
-                            <td class="text-center myorders-table__td">$0.00</td>
-                            <td class="text-center myorders-table__td">10.04.2017, 10:13</td>
-                        </tr>
-                    </table>
+                <div class="col-md-12 text-center">
+                    <button class="btn form-wrapper__btn">Получить адресс в США<br><span>указывайте этот адрес в качестве</span></button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <section class="s-delivery">
         <div class="container">
             <div class="row">
@@ -630,51 +566,103 @@
             </div>
         </div>
     </section>
-    <section class="s-specoffers">
+    <div class="carousel-firms">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="text-center specoffers__title">Выгодные предложения <a href="#">в 136 магазинах</a></h1>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" class="specoffers-container active text-center">
-                        <img src="images/specoffers/1.png" alt="" class="specoffers-container__img">
-                        <!--<p class="specoffers-container__title">gap.com</p>
-                        <img src="" alt="" class="specoffers-container__img">
-                        <p class="specoffers-container__price">$29.99</p>
-                        <p class="specoffers-container__desc">Рюкзак GAP</p>-->
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" class="specoffers-container text-center">
-                        <img src="images/specoffers/2.png" alt="" class="specoffers-container__img">
-                        <!--<p class="specoffers-container__title">gap.com</p>
-                        <img src="" alt="" class="specoffers-container__img">
-                        <p class="specoffers-container__price">$29.99</p>
-                        <p class="specoffers-container__desc">Рюкзак GAP</p>-->
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" class="specoffers-container text-center">
-                        <img src="images/specoffers/3.png" alt="" class="specoffers-container__img">
-                        <!--<p class="specoffers-container__title">gap.com</p>
-                        <img src="" alt="" class="specoffers-container__img">
-                        <p class="specoffers-container__price">$29.99</p>
-                        <p class="specoffers-container__desc">Рюкзак GAP</p>-->
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" class="specoffers-container text-center">
-                        <img src="images/specoffers/4.png" alt="" class="specoffers-container__img">
-                        <!--<p class="specoffers-container__title">gap.com</p>
-                        <img src="" alt="" class="specoffers-container__img">
-                        <p class="specoffers-container__price">$29.99</p>
-                        <p class="specoffers-container__desc">Рюкзак GAP</p>-->
-                    </a>
+                <div class="col-md-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
+                                            alt="First slide"></a>
+                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="delivery-feature">
+        <div class="delivery-feature__block">
+            <p class="delivery-feature__number">10000<span class="delivery-feature__text">пользователей</span></p>
+        </div>
+        <div class="delivery-feature__block">
+            <p class="delivery-feature__number">75800 <span class="delivery-feature__text">отправлено посылок</span></p>
+        </div>
+    </div>
     <div class="footer">
         <div class="container">
             <div class="row">
