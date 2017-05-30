@@ -2315,6 +2315,18 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 416px) {
+  .myorders-table__link {
+    font-size: 0.6875rem;
+  }
+
+  .myorders-table__th {
+    font-size: 0.625rem;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
   .myorders-menu__list {
     padding-left: 10px;
   }
