@@ -2315,6 +2315,22 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 416px) {
+  .info-content__link {
+    font-size: 0.5rem;
+  }
+
+  .delivery-info__icon {
+    width: 10%;
+  }
+
+  .delivery-btn {
+    left: 72px;
+  }
+
+  .form__field.delivery-parcels {
+    width: 154px;
+  }
+
   .myorders-table__link {
     font-size: 0.6875rem;
   }
