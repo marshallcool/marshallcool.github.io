@@ -1778,6 +1778,10 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 768px) {
+  .receiving-delivery__help {
+    padding-left: 0;
+  }
+
   .carousel-firms__block a {
     width: 102px;
     height: 72px;
@@ -2494,6 +2498,11 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 476px) {
+  .delivery-feature__block {
+    margin-right: 19px;
+    margin-left: 40px;
+  }
+
   .myorders-menu__title {
     font-size: 0.8125rem;
   }
