@@ -1392,7 +1392,7 @@ span.select2-selection.select2-selection--single span {
 .receiving-delivery__help {
   font-size: 1rem;
   font-family: open-sans-light;
-  margin-left: 103px;
+  padding-left: 103px;
   margin-top: 46px;
   margin-bottom: 40px;
 }
