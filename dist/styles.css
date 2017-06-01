@@ -1467,6 +1467,16 @@ span.select2-selection.select2-selection--single span {
   height: 65px;
 }
 
+.carouselMobile {
+  display: none;
+}
+
+.carousel-item.active {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #headerMenu {
   display: none;
 }
@@ -1540,6 +1550,35 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 990px) and (min-width: 769px) {
+  .receiving-delivery__help {
+    margin-left: 0;
+  }
+
+  .receiving-delivery img {
+    width: 62%;
+  }
+
+  .delivery-parallax {
+    height: 341px;
+  }
+
+  .parallax-block-content__desc {
+    font-size: 0.875rem;
+  }
+
+  .parallax-block-content__title {
+    font-size: 1.0625rem;
+  }
+
+  .parallax-block-content {
+    margin-top: 102px;
+    height: 58%;
+  }
+
+  .delivery__parallax-block h1 {
+    font-size: 2.5625rem;
+  }
+
   form.form-inline.my-2.my-md-0 {
     width: 190px !important;
   }
@@ -1718,6 +1757,20 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 768px) {
+  .carousel-firms__block a {
+    width: 102px;
+    height: 72px;
+    margin-bottom: 0;
+  }
+
+  .carouselMobile {
+    display: block;
+  }
+
+  .carouselDesctop {
+    display: none;
+  }
+
   .footer-adress__text {
     width: 100%;
   }
