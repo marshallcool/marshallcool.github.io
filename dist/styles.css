@@ -1518,6 +1518,18 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 1165px) and (min-width: 991px) {
+  .delivery__parallax-block h1 {
+    font-size: 2.5rem;
+  }
+
+  .delivery-parallax {
+    height: 367px;
+  }
+
+  .receiving-delivery img {
+    width: 68%;
+  }
+
   .delivery-parcels.col-md-2.text-center {
     margin-left: 0;
   }
@@ -1550,6 +1562,10 @@ span.select2-selection.select2-selection--single span {
 }
 
 @media screen and (max-width: 990px) and (min-width: 769px) {
+  .parallax-block-content {
+    padding-top: 0;
+  }
+
   .delivery-feature__block {
     margin-right: 46px;
     margin-left: 51px;
