@@ -16,7 +16,9 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+    <script src="./../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link rel="stylesheet" href="./dist/styles.css">
     <script type="text/javascript" src="./dist/bundle.js"></script>
@@ -46,6 +48,42 @@
             }
         });
         $(document).ready(function () {
+            $('#reviews-firm .owl-carousel-firms').owlCarousel({
+                stagePadding: 50,
+                loop: true,
+                margin: 12,
+                nav: true,
+                navText: ["", ""],
+                responsive: {
+                    0: {
+                        items: 4
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 12
+                    }
+                }
+            })
+            $('.owl-carousel').owlCarousel({
+                stagePadding: 50,
+                loop: true,
+                margin: 50,
+                nav: true,
+                navText: ["", ""],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
             $(".js-example-basic-single").select2();
             $(".js-example-responsive").select2();
             $('#nav-icon').click(function () {
@@ -83,54 +121,55 @@
                 id: 'Layer_1',
                 speed: 0.15
             }, {
-                id: 'Layer_2',
-                speed: 0.25
-            }, {
-                id: 'Layer_3',
-                speed: 0.5
-            }, {
-                id: 'Layer_4',
-                speed: 1.25
-            }, {
-                id: 'Layer_5',
-                speed: 0.75
-            }, {
-                id: 'Layer_6',
-                speed: 0.65
-            }, {
-                id: 'Layer_7',
-                speed: 0.45
-            }, {
-                id: 'Layer_8',
-                speed: 0.75
-            }, {
-                id: 'Layer_9',
-                speed: 0.25
-            }, {
-                id: 'Layer_10',
-                speed: 0.25
-            }, {
-                id: 'Layer_11',
-                speed: 0.25
-            }, {
-                id: 'Layer_12',
-                speed: 0.25
-            }, {
-                id: 'Layer_13',
-                speed: 0.25
-            }, {
-                id: 'Layer_14',
-                speed: 0.25
-            }, {
-                id: 'Layer_15',
-                speed: 1.25
-            },
-            {
-                id: 'Layer_16',
-                speed: 1.25
-            } );
+                    id: 'Layer_2',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_3',
+                    speed: 0.5
+                }, {
+                    id: 'Layer_4',
+                    speed: 1.25
+                }, {
+                    id: 'Layer_5',
+                    speed: 0.75
+                }, {
+                    id: 'Layer_6',
+                    speed: 0.65
+                }, {
+                    id: 'Layer_7',
+                    speed: 0.45
+                }, {
+                    id: 'Layer_8',
+                    speed: 0.75
+                }, {
+                    id: 'Layer_9',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_10',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_11',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_12',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_13',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_14',
+                    speed: 0.25
+                }, {
+                    id: 'Layer_15',
+                    speed: 1.25
+                },
+                {
+                    id: 'Layer_16',
+                    speed: 1.25
+                });
         });
     })
+
 </script>
 
 <body>
@@ -140,7 +179,7 @@
                 <div class="col header__container">
                     <div class="header-menu">
                         <a href="#" class="header-menu__logo">
-                            <img src="images/лого.png" alt="Logo" class="header-logo">
+                            <img src="images/logo.svg" alt="Logo" class="header-logo">
                         </a>
                         <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse hidden-md-up">
                             <div class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
@@ -162,94 +201,98 @@
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item nav-item__lang">
                                         <a href="#" class="text-btn text-btn--active">ru</a>
+                                    </li>
+                                    <li class="nav-item nav-item__lang">
                                         <a href="#" class="text-btn">en</a>
+                                    </li>
+                                    <li class="nav-item nav-item__lang">
                                         <a href="#" class="text-btn">ar</a>
-                                        </lidiv>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link nav-link--active">Услуги</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">тарифы</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">доставка</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">помощь</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">магазины</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">форум</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">еще</a>
-                                        </li>
-                                        <li class="header-menu__item">
-                                            <a href="#" class="header-menu__link header-menu__mobile">
-                                                <div class="header-icon__exit"></div>
-                                                Выход
-                                            </a>
-                                        </li>
-                                        <form action="" class="form-inline my-2 my-md-0">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                            <input type="text" class="form-control nav-form-control mr-sm-0">
-                                        </form>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link nav-link--active">Услуги</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">тарифы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">доставка</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">помощь</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">магазины</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">форум</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">еще</a>
+                                    </li>
+                                    <li class="header-menu__item">
+                                        <a href="#" class="header-menu__link header-menu__mobile">
+                                            <div class="header-icon__exit"></div>
+                                            Выход
+                                        </a>
+                                    </li>
+                                    <form action="" class="form-inline my-2 my-md-0">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <input type="text" class="form-control nav-form-control mr-sm-0">
+                                    </form>
                                 </ul>
                             </div>
                         </nav>
                         <ul class="header-menu__list">
-                            <a href="#" class="header-menu__link header-menu__link--active">
-                                <li class="header-menu__item">
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link header-menu__link--active">
                                     <div class="header-icon__order"></div>
                                     Мои Заказы
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link hidden-sm-down">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link hidden-sm-down">
                                     <div class="header-icon__profile"></div>
                                     Профиль
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">
                                     <div class="header-icon__balance"></div>
                                     Баланс $0.00
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link hidden-md-up" data-toggle="modal" data-target=".bd-example-modal-sm">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item hidden-md-up">
+                                <a href="#" class="header-menu__link" data-toggle="modal" data-target=".bd-example-modal-sm">
                                     <div class="header-icon__adress"></div>
                                     адрес США
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link hidden-sm-down">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link hidden-sm-down">
                                     <div class="header-icon__exit"></div>
                                     Выход
-                                </li>
-                            </a>
+                                </a>
+                            </li>
                         </ul>
                         <ul id="headerMenu" class="header-menu__list">
-                            <a href="#" class="header-menu__link header-menu__link--active">
-                                <li class="header-menu__item">
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link header-menu__link--active">
                                     <div class="header-icon__order"></div>
                                     Мои Заказы
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">
                                     <div class="header-icon__balance"></div>
                                     Баланс $0.00
-                                </li>
-                            </a>
-                            <a href="#" class="header-menu__link hidden-md-up" data-toggle="modal" data-target=".bd-example-modal-sm">
-                                <li class="header-menu__item">
+                                </a>
+                            </li>
+                            <li class="header-menu__item hidden-md-up">
+                                <a href="#" class="header-menu__link" data-toggle="modal" data-target=".bd-example-modal-sm">
                                     <div class="header-icon__adress"></div>
                                     адрес США
-                                </li>
-                            </a>
+                                </a>
+                            </li>
                         </ul>
 
                         <div class="header-lang hidden-sm-down">
@@ -360,31 +403,31 @@
     <div class="delivery-parallax">
         <div class="delivery__parallax-block">
             <h1>Доставка товаров из америки</h1>
-            <div class="parallax-block-content">
+            <a href="#" class="parallax-block-content">
                 <p class="parallax-block-content__title">Самостоятельная покупка</p>
                 <p class="parallax-block-content__desc">получите америнкаский адрес и самостоятельно заказывайте товары</p>
-            </div>
-            <div class="parallax-block-content">
+            </a>
+            <a href="#" class="parallax-block-content">
                 <p class="parallax-block-content__title">Самостоятельная покупка</p>
                 <p class="parallax-block-content__desc">получите америнкаский адрес и самостоятельно заказывайте товары</p>
-            </div>
+            </a>
         </div>
         <img id="Layer_1" src="images/main/parallax/bg.svg" alt="">
         <img src="images/main/parallax/star.svg" alt="" id="Layer_7">
-        <img src="images/main/parallax/3 облака.svg" alt="" id="Layer_8">
-        <img src="images/main/parallax/4 город.svg" alt="" id="Layer_9">
-        <img src="images/main/parallax/5 город.svg" alt="" id="Layer_10">
-        <img src="images/main/parallax/6 город.svg" alt="" id="Layer_11">
-        <img src="images/main/parallax/7 город.svg" alt="" id="Layer_12">
-        <img src="images/main/parallax/8 город.svg" alt="" id="Layer_13">
-        <img src="images/main/parallax/9 город.svg" alt="" id="Layer_14">
-        <img src="images/main/parallax/11 грузовик.svg" alt="" id="Layer_3">
-        <img src="images/main/parallax/12 машина.svg" alt="" id="Layer_4">
-        <img src="images/main/parallax/10 самолет.svg" alt="" id="Layer_15">
+        <img src="images/main/parallax/3cloud.svg" alt="" id="Layer_8">
+        <img src="images/main/parallax/4city.svg" alt="" id="Layer_9">
+        <img src="images/main/parallax/5city.svg" alt="" id="Layer_10">
+        <img src="images/main/parallax/6city.svg" alt="" id="Layer_11">
+        <img src="images/main/parallax/7city.svg" alt="" id="Layer_12">
+        <img src="images/main/parallax/8city.svg" alt="" id="Layer_13">
+        <img src="images/main/parallax/9city.svg" alt="" id="Layer_14">
+        <img src="images/main/parallax/truck.svg" alt="" id="Layer_3">
+        <img src="images/main/parallax/car.svg" alt="" id="Layer_4">
+        <img src="images/main/parallax/aircraft.svg" alt="" id="Layer_15">
         <img src="images/main/parallax/free.svg" alt="" id="Layer_2">
-        <img src="images/main/parallax/14 волна.svg" alt="" id="Layer_5">
-        <img src="images/main/parallax/15volna.svg" alt="" id="Layer_6">
-        <img src="images/main/parallax/корабль.svg" alt="" id="Layer_16">
+        <img src="images/main/parallax/14wave.svg" alt="" id="Layer_5">
+        <img src="images/main/parallax/15wave.svg" alt="" id="Layer_6">
+        <img src="images/main/parallax/ship.svg" alt="" id="Layer_16">
     </div>
     <div class="receiving-delivery">
         <div class="container">
@@ -433,19 +476,13 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="form__field delivery-city">
                         <label class="form__label">Город</label>
-                        <select class="js-example-responsive" style="width: 100%">
-                            <option value="AL">Alabama</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
+                        <input type="text">
                     </div>
                 </div>
                 <div class="delivery-parcels col-md-2 text-center col-sm-4 col-5">
                     <div class="form__field delivery-parcels">
                         <label class="form__label">Вес посылки</label>
-                        <select class="js-example-responsive" style="width: 40%">
-                            <option value="AL">0,5</option>
-                            <option value="WY">0,6</option>
-                        </select>
+                        <input type="number">
                         <select class="js-example-responsive" style="width: 40%">
                             <option value="AL">кг</option>
                             <option value="WY">тн</option>
@@ -592,40 +629,147 @@
             </div>
         </div>
     </section>
-    <div class="carousel-firms carouselMobile">
+    <!--<div class="carousel-firms ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner carouselDesctop" role="listbox">
                             <div class="carousel-item active">
                                 <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                                </div>
+                                <div class="carousel-firms__block carousel-firms__block--bottom">
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-inner carouselMobile" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-firms__block carousel-firms__block--top">
+                                    <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png');"
+                                        onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                                    <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
                                 </div>
                             </div>
                         </div>
@@ -641,92 +785,125 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="carousel-firms carouselDesctop">
+    </div>-->
+    <div class="carousel-firms" id="reviews-firm">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
-                                </div>
-                                <div class="carousel-firms__block carousel-firms__block--bottom">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
-                                </div>
-                                <div class="carousel-firms__block carousel-firms__block--bottom">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-firms__block carousel-firms__block--top">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Apple-logo-grey.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/baf2899647d7ae41ce4e57184091bea1_ralph-lauren-lauren-clip-art-polo-ralph-lauren-logo-clipart_3600-1050.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/images.png" alt="First slide"></a>
-                                </div>
-                                <div class="carousel-firms__block carousel-firms__block--bottom">
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/img-thing.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Michael_Kors_(brand)_logo.svg.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/offer_card.png" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Sephora_Logo.jpg" alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/Walmart-Logo-slogan.png"
-                                            alt="First slide"></a>
-                                    <a href="#"><img class="d-block img-fluid" src="images/main/carousel-firms/amazon_logo_RGB.jpg" alt="First slide"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                    <div class="owl-carousel owl-carousel-firms owl-theme">
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
                     </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/gap-sklep-w-polsce-145513_L.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/gap-sklep-w-polsce-145513_L.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/bfadb3cb17313a974e70276df5f6ccfd.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/amazon_logo_RGB.jpg');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/amazon_logo_RGB.jpg)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/amazon_logo_RGB.jpg)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/images.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/images.png)';"
+                            onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/images.png)';"></a>
+                    </div>
+                    <div class="item carousel-firms__block">
+                        <a href="#" style="background: url('images/main/carousel-firms/Apple-logo-grey.png');" onmouseover="this.style.backgroundImage='url(images/main/carousel-firms/hover/Apple-logo-grey.png)';"
+                                        onmouseout="this.style.backgroundImage='url(images/main/carousel-firms/Apple-logo-grey.png)';"></a>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -739,45 +916,137 @@
             <p class="delivery-feature__number">75800 <span class="delivery-feature__text">отправлено посылок</span></p>
         </div>
     </div>
+    <div class="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <p>"Спасибо большое! посылка упакована хорошо"</p>
+                        <div class="reviews-information">
+                            <div class="reviews-information--left">
+                                <p class="dark-gray">стоимость покупки</p>
+                                <p class="text-bold">$380.00</p>
+                                <p class="dark-gray reviews-information__ship">доставка</p>
+                                <p class="text-bold">$38</p>
+                            </div>
+                            <div class="reviews-information--right">
+                                <p class="text-bold">Angelina</p>
+                                <p class="dark-gray">Russia, Murmanstk VIP-RA1243234234234</p>
+                            </div>
+                        </div>
+                        <div class="reviews-information--img">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>"Спасибо большое! посылка упакована хорошо"</p>
+                        <div class="reviews-information">
+                            <div class="reviews-information--left">
+                                <p class="dark-gray">стоимость покупки</p>
+                                <p class="text-bold">$380.00</p>
+                                <p class="dark-gray reviews-information__ship">доставка</p>
+                                <p class="text-bold">$38</p>
+                            </div>
+                            <div class="reviews-information--right">
+                                <p class="text-bold">Angelina</p>
+                                <p class="dark-gray">Russia, Murmanstk VIP-RA1243234234234</p>
+                            </div>
+                        </div>
+                        <div class="reviews-information--img">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>"Спасибо большое! посылка упакована хорошо"</p>
+                        <div class="reviews-information">
+                            <div class="reviews-information--left">
+                                <p class="dark-gray">стоимость покупки</p>
+                                <p class="text-bold">$380.00</p>
+                                <p class="dark-gray reviews-information__ship">доставка</p>
+                                <p class="text-bold">$38</p>
+                            </div>
+                            <div class="reviews-information--right">
+                                <p class="text-bold">Angelina</p>
+                                <p class="dark-gray">Russia, Murmanstk VIP-RA1243234234234</p>
+                            </div>
+                        </div>
+                        <div class="reviews-information--img">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>"Спасибо большое! посылка упакована хорошо"</p>
+                        <div class="reviews-information">
+                            <div class="reviews-information--left">
+                                <p class="dark-gray">стоимость покупки</p>
+                                <p class="text-bold">$380.00</p>
+                                <p class="dark-gray reviews-information__ship">доставка</p>
+                                <p class="text-bold">$38</p>
+                            </div>
+                            <div class="reviews-information--right">
+                                <p class="text-bold">Angelina</p>
+                                <p class="dark-gray">Russia, Murmanstk VIP-RA1243234234234</p>
+                            </div>
+                        </div>
+                        <div class="reviews-information--img">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-4">
                     <ul>
-                        <a href="#" class="footer__link">
-                            <li>Главная</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Форум</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Помощь</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Гарантии</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Тарифы</li>
-                        </a>
+                        <li><a href="#" class="footer__link">Главная</a></li>
+                        <li><a href="#" class="footer__link">Форум</a></li>
+                        <li><a href="#" class="footer__link">Помощь</a></li>
+                        <li><a href="#" class="footer__link">Гарантии</a></li>
+                        <li><a href="#" class="footer__link">Тарифы</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-8">
                     <ul>
-                        <a href="#" class="footer__link">
-                            <li>Доставка</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>О нас</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Партнерская программа</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Способы доставки</li>
-                        </a>
-                        <a href="#" class="footer__link">
-                            <li>Организаторам СП</li>
-                        </a>
+                        <li><a href="#" class="footer__link">Доставка</a></li>
+                        <li><a href="#" class="footer__link">О нас</a></li>
+                        <li><a href="#" class="footer__link">Партнерская программа</a></li>
+                        <li><a href="#" class="footer__link">Способы доставки</a></li>
+                        <li><a href="#" class="footer__link">Организаторам СП</a></li>
                     </ul>
                 </div>
                 <div class="col-md-1"></div>
